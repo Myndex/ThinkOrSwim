@@ -91,14 +91,15 @@ Consequences worth noting:
 
 - **No shortcut between palettes.** Solving the dark mapping tells you nothing
   about light. Each was swept independently.
-- **Group sizes differ.** The Labels swatch drives 7 keys in dark but 5 in light.
-  Price update drives 3 in both. Selection drives 3 in both, but light adds a
-  derived child that dark does not have.
 - **Derived-key behavior differs.** Dark's Table background child *brightens*;
   light's *darkens*. Each palette generates a companion tone that contrasts
   against its own background, so the arithmetic is not shared.
-- **Light has one fewer key** (29 against 31) because dark's Text and values
-  swatch generates a derived child (`D_112`) that light has no equivalent for.
+    - It is important to note that the method ToS uses to derive a color from a user election is not based on perception, and thus may fail in terms of visual contraat. This is discussed below. 
+- **Light has fewer keys** (29 against 31).
+    - Dark surfaces two additional keys for labels.
+    - Dark's _Text and values_ swatch generates a derived child (`D_112`) that light has no equivalent for.
+    - However, Light's _selection_ swatch generates a derived child (`B_240`), so the total difference is 2 keys.
+
 
 ---
 
