@@ -148,7 +148,7 @@ the chosen value and writes them to separate keys. Eight such relationships exis
 | `B_240` | `B_209` | Selection | V ← min(2V, 255); S ÷ 2 when capped |
 | `B_267` | `B_268` | Table background | RGB × 0.9 per channel |
 
-Hue is preserved in every case. V and S refer to HSV value and saturation.
+An attempt is made to preserve hue in every case. V and S refer to HSV value and saturation.
 
 ### The `min(2V, 255)` family
 
@@ -211,7 +211,7 @@ choosing source colors carefully, because the derivation happens after the choic
 
 ### Correcting the perceptual problems
 
-There is a perceptually accurate contrast method that is superior to that used by ToS for the derived colors, and if hand-editing colors it is preferable to measure the contrast using a perceptually accurate method such as APCA.
+There is a perceptually accurate contrast method that is superior to that used by ToS for the derived colors, and if hand-editing colors it is preferable to measure the visual contrast using a perceptually accurate method such as APCA.
 
 A suitable APCA tool is [APCAcontrast.com](https://APCAcontrast.com)
 
