@@ -287,3 +287,7 @@ Selection, Tooltips.
 **Determined by exhaustive counting** — the remaining 9 swatches in each palette:
 Static headers, Collapsible headers, Second-level headers, Symbol bars, Marked
 rows, Content background, Platform background, Focus, Server messages.
+
+
+All works in this repo copyright © 2026 Myndex Research. All Rights Reserved.
+
