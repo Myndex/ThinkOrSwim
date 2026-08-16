@@ -2,19 +2,47 @@
 
 Organized by what a key does in the interface. A key appears once in every
 subgroup it belongs to, with the elements relevant to that subgroup only. The
-**Other subgroups** column lists every other place the same key appears.
+`OTHER SUBGROUPS` column lists every other place the same key appears.
 
-The **SWATCH** column gives the color scheme editor swatch that writes the key,
-or `XML` for keys no swatch writes, or `Derived[n]` for keys the editor computes
-from key *n*.
+The `SWATCH` column gives the color scheme editor swatch that writes the key,
+`XML` for keys no swatch writes, or `Derived[n]` for keys the editor computes from
+key *n*. Derived can still be replaced with manual edits.
 
-The **PAIRED WITH** column records which keys a given key lays on top of, or lays
-under, for the elements in that subgroup. It is unpopulated — no pairing has been
-established by observation. Pairing cannot be read from the XML and cannot be
-deduced from element descriptions; it has to be confirmed directly.
+The `PAIRED WITH` column records which keys a given key lays over or under, for
+the elements in that subgroup. It is unpopulated — no pairing has been established
+by observation. Pairing cannot be read from the XML or deduced from element
+descriptions; it has to be confirmed directly.
 
-Elements whose subgroup has not been determined by observation are listed at the
-end rather than placed. Nothing here is inferred.
+### Function taxonomy
+
+**Foreground layer**
+
+| Term | Definition |
+|---|---|
+| Labels | Text describing what a thing is, giving context to a value |
+| Values | A numerical or textual value — a price, a symbol, a description |
+| Content | Readable material: news, a chart, a table of values |
+
+**Interactive layer**
+
+| Term | Definition |
+|---|---|
+| Interactive text/symbology | Text and symbology on buttons, menus, and controls |
+| Interactive backgrounds | The interactive elements themselves |
+| Channel colors and color coding | Colors that identify a category |
+
+**Background layer**
+
+| Term | Definition |
+|---|---|
+| Headers and dividers with text | Bars and containers that carry text |
+| Backgrounds | The background behind text or chart graphics |
+| Dividers and containers without text | Dividing lines, container outlines |
+
+ThinkOrSwim is not consistent in how it assigns keys to roles. Key `128` carries
+both a label and a value. Key `102` appears in five subgroups. Several keys span
+three or more.
+
 
 ---
 
@@ -24,41 +52,38 @@ end rather than placed. Nothing here is inferred.
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 102 | Accounts, instrument description, labels | XML | Content, Interactive text/symbology, Meta text/symbology, Values | — |
-| 106 | Mid/Nat slider text, placeholder text | XML | Interactive text/symbology | — |
-| 107 | Chart axes | Labels | Interactive text/symbology | — |
-| 112 | Rare/dim incidentals in some gadgets | Derived[140] | — | — |
-| 113 | Expanded header texts, Chart tool icons | Labels | Content, Interactive text/symbology | — |
-| 126 | Secondary static labels, N/A, address, misc | Labels | — | — |
-| 127 | Collapsed header texts | Labels | Backgrounds, Content | — |
-| 128 | Selectable/switch labels | Labels | Values | — |
-| 135 | Unsorted column headers | Labels | — | — |
+| 102 | Accounts, instrument description, labels | XML | Content, Interactive text/symbology, Values | — |
+| 106 | Mid/Nat slider text label, placeholder text | XML | Interactive text/symbology | — |
+| 112 | Rare/dim incidental text in some gadgets | Derived[140] | — | — |
+| 113 | Expanded headers (text) | Labels | Content, Interactive text/symbology | — |
+| 126 | Secondary static labels, N/A, address, misc text | Labels | — | — |
+| 127 | Collapsed headers (text) | Labels | Backgrounds, Content | — |
+| 128 | Selectable/switch label text | Labels | Values | — |
+| 135 | Unsorted column header text | Labels | — | — |
 | 140 | Main texts | Text and values | Content, Values | — |
-| 142 | Fundamental labels, weekly options, sorted column headers | Labels | — | — |
+| 142 | Sorted column header text, weekly options, stock fundamentals labels | Labels | — | — |
 | 152 | Weekly options header text | XML | Channel colors | — |
 | 171 | Collapsible headers | Collapsible headers | — | — |
 | 178 | Static headers | Static headers | — | — |
-| 181 | Option chain static column headings | XML | Interactive text/symbology | — |
+| 181 | Option chain static column heading text | XML | Interactive text/symbology | — |
 | 187 | Second-level headers | Second-level headers | — | — |
 
 ### Values
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 102 | Account values, economic data, Default doji color | XML | Content, Interactive text/symbology, Labels, Meta text/symbology | — |
-| 107 | Chart axes, cursor crosshairs | Labels | Interactive text/symbology | — |
+| 102 | Account values, economic data | XML | Content, Interactive text/symbology, Labels | — |
 | 119 | Rising price values, up candle bodies | Price up | — | — |
 | 120 | Derived price up variant | Derived[119] | — | — |
 | 124 | Derived price down variant | Derived[137] | — | — |
-| 125 | Connected/realtime data text | XML | — | — |
-| 128 | Mid ask price | Labels | Labels | — |
+| 125 | Connected/realtime data text, status good | XML | — | — |
+| 128 | Mid/Nat live price | Labels | Labels | — |
 | 137 | Falling price values, down candle bodies | Price down | — | — |
 | 138 | Price update | Price update | — | — |
 | 139 | Price update | Price update | — | — |
 | 140 | Main texts | Text and values | Content, Labels | — |
-| 146 | Options in the money (highlighted background) | XML | — | — |
 | 147 | Puts (stats, Time and Sales) | XML | Channel colors | — |
-| 148 | Calls | XML | — | — |
+| 148 | Calls (stats, Time and Sales) | XML | — | — |
 | 162 | Default candle fill, down | XML | — | — |
 | 167 | Price update | Price update | — | — |
 
@@ -66,12 +91,14 @@ end rather than placed. Nothing here is inferred.
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
+| 102 | Default doji color | XML | Interactive text/symbology, Labels, Values | — |
+| 107 | Chart axes (price and time), chart cursor crosshairs | Labels | Interactive text/symbology | — |
 | 113 | News text, ThinkScript reserved words | Labels | Interactive text/symbology, Labels | — |
-| 116 | ThinkScript comment text | XML | Interactive text/symbology, Meta text/symbology | — |
+| 116 | ThinkScript comment text (#) | XML | Interactive text/symbology | — |
 | 127 | ThinkScript punctuation and functions | Labels | Backgrounds, Labels | — |
 | 140 | Main texts | Text and values | Labels, Values | — |
 | 156 | ThinkScript variables | XML | Channel colors | — |
-| 160 | Indicator for lowest rating in fundamentals | XML | — | — |
+
 
 ---
 
@@ -79,74 +106,64 @@ end rather than placed. Nothing here is inferred.
 
 ### Interactive text/symbology
 
-Graphics and symbology on interactive elements are treated the same as text.
+Text and symbology drawn on interactive elements. Graphics and symbology on an
+interactive element are treated the same as text. Rows are ordered by element,
+with an element's states adjacent: at rest, then active, hovered, clicked.
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 102 | Buy/sell button text | XML | Content, Labels, Meta text/symbology, Values | — |
-| 106 | Style display arrow | XML | Labels | — |
-| 107 | Menu graphics and arrows, checkboxes | Labels | Content | — |
-| 113 | Tabs, menu text, closed "link" control (links quantity or TIF across multiple legs of one order) | Labels | Content, Labels | — |
-| 116 | Button arrows | XML | Content, Meta text/symbology | — |
+| 102 | Buy/sell button text | XML | Content, Labels, Values | — |
 | 181 | Button texts | XML | Labels | — |
+| 113 | Tabs | Labels | Content, Labels | — |
+| 113 | Menu text | Labels | Content, Labels | — |
+| 107 | Menu graphics and arrows | Labels | Content | — |
+| 113 | Chart tool icons | Labels | Content, Labels | — |
+| 113 | "Link" control, closed (links quantity or TIF across multiple legs of one order) | Labels | Content, Labels | — |
+| 106 | Style display arrow, clickable link — at rest | XML | Labels | — |
+| 102 | Style display arrow — hovered | XML | Content, Labels, Values | — |
+| 107 | Checkbox checks | Labels | Content | — |
+| 103 | Checkbox text — disabled | XML | Dividers/containers without text, Interactive backgrounds | — |
+| 116 | Button arrows | XML | Content | — |
 | 182 | Pull-down button arrow, plus/minus on some increment buttons | XML | — | — |
+| 102 | Highlighted text | XML | Content, Labels, Values | — |
+| 116 | Inactive/disabled text | XML | Content | — |
+| 145 | Weekly options date — hover text | XML | — | — |
+| 111 | Active drawing, while editing | Selection | Channel colors, Interactive backgrounds | — |
 
 ### Interactive backgrounds
 
+The interactive elements themselves — buttons, menus, control surfaces. Rows are
+ordered by element, with an element's states adjacent: at rest, then active,
+hovered, clicked.
+
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 105 | Popup menu background, order ticket middle bar (mostly an interactive surface) | XML | Dividers/containers without text, Meta BGs | — |
-| 109 | Clickable buttons (increment/decrement, pulldowns) | XML | Meta BGs | — |
-| 111 | Button on Mid/Nat | Selection | Channel colors, Meta text/symbology | — |
-| 117 | Buy button, scan button | XML | Channel colors | — |
-| 121 | Sell button | XML | — | — |
-| 132 | Clickable area | XML | — | — |
-| 151 | Clickable tab to open the trade ticket | XML | Headers/dividers with text | — |
+| 117 | Buy button, scan button, submit button — at rest | XML | Channel colors | — |
+| 118 | BUY button, SUBMIT button — hovered | XML | — | — |
+| 136 | Buy button, Send button — clicked | XML | — | — |
+| 121 | Sell button — at rest | XML | — | — |
+| 122 | Sell button — hovered | XML | — | — |
+| 109 | Clickable buttons (increment/decrement, pulldowns) — at rest | XML | — | — |
+| 103 | Clickable buttons (increment/decrement, pulldowns) — hovered | XML | Dividers/containers without text, Interactive text/symbology | — |
+| 105 | Clickable buttons — clicked | XML | Dividers/containers without text | — |
+| 179 | Outlines for clickable buttons | XML | Dividers/containers without text | — |
+| 132 | Clickable areas | XML | — | — |
 | 183 | Scroll bar background | XML | — | — |
-
-### Meta text/symbology
-
-**Focus** means the currently active workspace — a chart, a tab. **Selection**
-means a specific, ephemerally selected entity: the current line in a watchlist, a
-range of code in ThinkScript, selected text, a row or rows in the monitor tab.
-Watchlists also offer a persistent selection. A focus or a selection can affect
-any or all of the related elements, and ThinkOrSwim is not consistent about
-which.
-
-Hover, clicked, selected, and active states. Any of these states is meta by
-definition, regardless of what the element is in its resting state. This
-includes chart graphics in an active state.
-
-| KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
-|---|---|---|---|---|
-| 102 | Highlighted text, hovered Style display arrow | XML | Content, Interactive text/symbology, Labels, Values | — |
-| 103 | Disabled checkbox text | XML | Dividers/containers without text, Meta BGs | — |
-| 110 | Selected symbol bar | Selection | Meta BGs | — |
-| 111 | Active drawing | Selection | Channel colors, Interactive backgrounds | — |
-| 116 | Inactive/disabled text | XML | Content, Interactive text/symbology | — |
-| 145 | Weekly options date hover text | XML | — | — |
-| 169 | Active workspace indication (chart, tab). Affected elements vary; not consistent | Focus | Meta BGs | — |
-
-### Meta backgrounds
-
-Hover, clicked, selected, and active states. Any of these states is meta by
-definition, regardless of what the element is in its resting state. This
-includes chart graphics in an active state.
-
-| KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
-|---|---|---|---|---|
-| 103 | Hovered clickable buttons (increment/decrement, pulldowns) | XML | Dividers/containers without text, Meta text/symbology | — |
-| 105 | ThinkScript selection, clicked scroll slider, clicked clickable buttons | XML | Dividers/containers without text, Interactive backgrounds | — |
-| 108 | Hovered checkbox | XML | Backgrounds, Dividers/containers without text, Headers/dividers with text | — |
-| 109 | Hovered scroll slider | XML | Interactive backgrounds | — |
-| 110 | Selected symbol bar background | Selection | Meta text/symbology | — |
-| 118 | Hovered BUY button, hovered SUBMIT | XML | — | — |
-| 122 | Hovered sell button | XML | — | — |
-| 133 | Row select | Selection | — | — |
-| 134 | Active Trader chart toolbar surface, hover state | XML | — | — |
-| 136 | Clicked Buy or Send button | XML | — | — |
-| 169 | Active workspace indication (chart, tab). Affected elements vary; not consistent | Focus | Meta text/symbology | — |
-| 176 | Marked rows | Marked rows | Backgrounds | — |
+| 109 | Scroll slider knob — hovered | XML | — | — |
+| 105 | Scroll slider knob — clicked | XML | Dividers/containers without text | — |
+| 114 | Checkbox outlines | XML | Backgrounds, Dividers/containers without text | — |
+| 108 | Checkbox — hovered | XML | Backgrounds, Dividers/containers without text, Headers/dividers with text | — |
+| 105 | Popup menu background | XML | Dividers/containers without text | — |
+| 105 | Order ticket middle bar background | XML | Dividers/containers without text | — |
+| 105 | ThinkScript selection | XML | Dividers/containers without text | — |
+| 151 | Clickable tab to bring up the trade ticket | XML | Headers/dividers with text | — |
+| 111 | Mid/Nat slider button — selected | Selection | Channel colors, Interactive text/symbology | — |
+| 134 | Active Trader chart toolbar — hovered | XML | — | — |
+| 172 | Symbol bar — at rest | Symbol bars | — | — |
+| 110 | Symbol bar — selected (text and background) | Selection | — | — |
+| 133 | Table row — selected | Selection | — | — |
+| 176 | Table row — marked | Marked rows | Backgrounds | — |
+| 169 | Active workspace focus (chart, tab). Affected elements vary; not consistent | Focus | — | — |
 
 ### Channel colors and color coding
 
@@ -155,20 +172,27 @@ Colors that identify a category rather than a state or a surface role.
 **Channels** are ThinkOrSwim's symbol-linking system. Any chart or symbol-oriented
 gadget can be assigned to a channel; gadgets sharing a channel stay in sync, so
 changing the symbol in one changes it in all the others on that channel. The
-channel color identifies which channel a gadget belongs to.
+channel color identifies which channel a gadget belongs to. Each channel is also
+identified by its number, though the color choices can leave that number hard to
+read.
 
+Also included: colors that encode a data condition rather than an interaction
+state.
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 111 | Channel 3 (blue default) | Selection | Interactive backgrounds, Meta text/symbology | — |
-| 117 | Channel 4 (green default) | XML | Interactive backgrounds | — |
-| 129 | Channel 8 (brown default) | XML | — | — |
-| 147 | Channel 5 (purple default) | XML | Values | — |
 | 149 | Channel 1 (red default) | XML | — | — |
 | 152 | Channel 2 (yellow default) | XML | Labels | — |
+| 111 | Channel 3 (blue default) | Selection | Interactive backgrounds, Interactive text/symbology | — |
+| 117 | Channel 4 (green default) | XML | Interactive backgrounds | — |
+| 147 | Channel 5 (purple default) | XML | Values | — |
 | 153 | Channel 6 (maroon default) | XML | — | — |
 | 154 | Channel 7 (orange default) | XML | — | — |
+| 129 | Channel 8 (brown default) | XML | — | — |
 | 156 | Channel 9 (lilac default) | XML | Content | — |
+| 146 | Options in the money (highlighted background) | XML | — | — |
+| 160 | Lowest analyst rating indicator in analyze-fundamentals | XML | — | — |
+
 
 ---
 
@@ -176,41 +200,43 @@ channel color identifies which channel a gadget belongs to.
 
 ### Headers and dividers with text
 
+Bars and containers that provide a background for text labels or values. The text
+itself is listed under Labels, Values, or Content.
+
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 108 | Main tab bar | XML | Backgrounds, Dividers/containers without text, Meta BGs | — |
+| 108 | Main tab bar (highlighted tab is derived) | XML | Backgrounds, Dividers/containers without text, Interactive backgrounds | — |
 | 141 | Secondary tab bar | XML | Backgrounds | — |
 | 151 | Second tab bar, chart cell side bar | XML | Interactive backgrounds | — |
-| 186 | Application-level top bar surface; carries substantial text | XML | — | — |
+| 186 | Top most bar (background) | XML | — | — |
 
 ### Backgrounds
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
 | 101 | Platform background | Platform background | — | — |
-| 108 | Option chain strikes list background | XML | Dividers/containers without text, Headers/dividers with text, Meta BGs | — |
-| 114 | ThinkScript background, text entry background (search/symbol) | XML | Dividers/containers without text | — |
-| 115 | Chart tool background, dashboard background | XML | — | — |
+| 108 | Option chain strikes-list background | XML | Dividers/containers without text, Headers/dividers with text, Interactive backgrounds | — |
+| 114 | ThinkScript background, text entry background (search/symbol) | XML | Dividers/containers without text, Interactive backgrounds | — |
+| 115 | Chart tool list background, dashboard background | XML | — | — |
 | 127 | Warning | Labels | Content, Labels | — |
-| 141 | Background for some analysis panels | XML | Headers/dividers with text | — |
+| 141 | Background for some analysis windows | XML | Headers/dividers with text | — |
+| 161 | Analyze-earnings sidebar backgrounds | XML | — | — |
 | 170 | Tooltip background | Tooltips | — | — |
-| 172 | Symbol bar background (unconfirmed) | Symbol bars | — | — |
-| 161 | Analyze and earnings sidebar backgrounds | XML | — | — |
 | 173 | Derived table background variant | Derived[174] | — | — |
 | 174 | Table background | Table background | — | — |
 | 175 | Content background | Content background | — | — |
-| 176 | Marked rows | Marked rows | Meta BGs | — |
+| 176 | Marked rows | Marked rows | Interactive backgrounds | — |
 
 ### Dividers and containers without text
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 103 | Menu outline, chart outlines | XML | Meta BGs, Meta text/symbology | — |
-| 104 | Text entry border (search/symbol), options and product depth grid | XML | — | — |
-| 105 | Widget dividers | XML | Interactive backgrounds, Meta BGs | — |
-| 108 | Custom column dialog outlines | XML | Backgrounds, Headers/dividers with text, Meta BGs | — |
-| 114 | Checkbox outlines | XML | Backgrounds | — |
-| 179 | Clickable button outlines | XML | — | — |
+| 103 | Menu outline, chart outlines | XML | Interactive backgrounds, Interactive text/symbology | — |
+| 104 | Text entry border (search/symbol), options risk and product depth chart grid | XML | — | — |
+| 105 | Widget dividers | XML | Interactive backgrounds | — |
+| 108 | Custom column setup dialog list outlines | XML | Backgrounds, Headers/dividers with text, Interactive backgrounds | — |
+| 114 | Checkbox outlines | XML | Backgrounds, Interactive backgrounds | — |
+| 179 | Outlines for clickable buttons | XML | Interactive backgrounds | — |
 
 ---
 
@@ -218,8 +244,7 @@ channel color identifies which channel a gadget belongs to.
 
 | KEY | ELEMENT | SWATCH | WHAT IS UNDETERMINED |
 |---|---|---|---|
-| 177 | Server messages | Server messages |  |
-
+| 177 | Server messages | Server messages | Never observed in use; whether the key paints the message text or its background is unknown |
 
 ---
 
@@ -237,9 +262,9 @@ They have no key of their own and cannot be overridden by hand-authoring:
 
 ## Coverage
 
-69 keys placed across 11 subgroups. One key remains unplaced.
+68 keys placed across 9 subgroups. One key remains unplaced.
 
-Multi-subgroup keys: `102` in 5; `108` in 4; `103`, `105`, `111`, `113`, `116`, `127`, `140` in 3; `106`, `107`, `109`, `110`, `114`, `117`, `128`, `141`, `147`, `151`, `152`, `156`, `169`, `176`, `181` in 2.
+Multi-subgroup keys: `102`, `108` in 4; `103`, `111`, `113`, `114`, `127`, `140` in 3; `105`, `106`, `107`, `116`, `117`, `128`, `141`, `147`, `151`, `152`, `156`, `176`, `179`, `181` in 2.
 
 Key numbers above `187` have never been probed. No observed scheme file has
 contained one, but the probes were built from the observed range only, so their
