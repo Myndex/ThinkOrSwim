@@ -1,4 +1,5 @@
 # ThinkOrSwim
+
 Tools and insights into the Think or Swim (desktop) trading application, now owned by Schwab. This repo is intended to contain thrinkscripts, information on preference files, optimizations, etc.
 
 ## Table of Contents
@@ -8,3 +9,7 @@ Tools and insights into the Think or Swim (desktop) trading application, now own
 2) [DarkModeKeys.md](DarkModeKeys.md) documentation for dark mode keys-to-elements.
 
 2) [LightMode.md](LightMode.md) documentation for light mode.
+
+--
+
+All works in this repo copyright © 2026 Myndex Research. All Rights Reserved.
