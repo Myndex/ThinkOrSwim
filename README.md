@@ -15,7 +15,7 @@ Tools and insights into the Think or Swim (desktop) trading application, now own
 
 [**Andy Dark**](http://tos.mx/!jO9ipver) Personal Dark Mode scheme for ThinkOrSwim:
 
-    `http://tos.mx/!jO9ipver`
+    http://tos.mx/!jO9ipver
 
 Import by pasting that URL into the "Open Shared Item" in the upper right setup menu.
 
