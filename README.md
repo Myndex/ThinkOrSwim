@@ -11,5 +11,16 @@ Tools and insights into the Think or Swim (desktop) trading application, now own
 2) [LightMode.md](LightMode.md) documentation for light mode.
 
 --
+## ThinkOrSwim Shared Pallettes
+
+[**Andy Dark**](http://tos.mx/!jO9ipver) Personal Dark Mode scheme for ThinkOrSwim:
+
+    `http://tos.mx/!jO9ipver`
+
+Import by pasting that URL into the "Open Shared Item" in the upper right setup menu.
+
+There are a few colors I haven't mapped yet, like the blue links that are too dark on the TradeLog page... Otherwise, scheme is intended to improve legibility when bleary-eyed at 6:30 in the morning.
+
+----
 
 All works in this repo copyright © 2026 Myndex Research. All Rights Reserved.
