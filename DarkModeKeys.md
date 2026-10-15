@@ -157,7 +157,7 @@ hovered, clicked.
 | 105 | Order ticket middle bar background | XML | Dividers/containers without text | — |
 | 105 | ThinkScript selection | XML | Dividers/containers without text | — |
 | 151 | Clickable tab to bring up the trade ticket | XML | Headers/dividers with text | — |
-| 111 | Mid/Nat slider button — selected | Selection | Channel colors, Interactive text/symbology | — |
+| 111 | Mid/Nat slider button, Scanner Sliders | Selection | Channel colors (3), Interactive text/symbology | — |
 | 134 | Active Trader chart toolbar — hovered | XML | — | — |
 | 172 | Symbol bar — at rest | Symbol bars | — | — |
 | 110 | Symbol bar — selected (text and background) | Selection | — | — |
@@ -183,7 +183,7 @@ state.
 |---|---|---|---|---|
 | 149 | Channel 1 (red default) | XML | — | — |
 | 152 | Channel 2 (yellow default) | XML | Labels | — |
-| 111 | Channel 3 (blue default) | Selection | Interactive backgrounds, Interactive text/symbology | — |
+| 111 | Channel 3 (blue default) | Selection | Interactive backgrounds, Mid/Nat Slider, Interactive text/symbology | — |
 | 117 | Channel 4 (green default) | XML | Interactive backgrounds | — |
 | 147 | Channel 5 (purple default) | XML | Values | — |
 | 153 | Channel 6 (maroon default) | XML | — | — |
