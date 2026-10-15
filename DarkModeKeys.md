@@ -181,10 +181,10 @@ state.
 
 | KEY | ELEMENTS | SWATCH | OTHER SUBGROUPS | PAIRED WITH |
 |---|---|---|---|---|
-| 149 | Channel 1 (red default) | XML | — | — |
+| 149 | Channel 1 (red default) | XML | Vertical opex lines | — |
 | 152 | Channel 2 (yellow default) | XML | Labels | — |
-| 111 | Channel 3 (blue default) | Selection | Interactive backgrounds, Mid/Nat Slider, Interactive text/symbology | — |
-| 117 | Channel 4 (green default) | XML | Interactive backgrounds | — |
+| 111 | Channel 3 (blue default) | Selection | Mid/Nat Price slider knob at rest, Interactive text/symbology | — |
+| 117 | Channel 4 (green default) | XML | Green buttons/Interactive backgrounds | — |
 | 147 | Channel 5 (purple default) | XML | Values | — |
 | 153 | Channel 6 (maroon default) | XML | — | — |
 | 154 | Channel 7 (orange default) | XML | — | — |
