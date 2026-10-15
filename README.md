@@ -13,9 +13,9 @@ Tools and insights into the Think or Swim (desktop) trading application, now own
 --
 ## ThinkOrSwim Shared Pallettes
 
-[**Andy Dark**](http://tos.mx/!jO9ipver) Personal Dark Mode scheme for ThinkOrSwim:
+[**Andy Dark**](http://tos.mx/!Dnb4pVac) Personal Dark Mode scheme for ThinkOrSwim:
 
-    http://tos.mx/!jO9ipver
+    http://tos.mx/!Dnb4pVac
 
 Import by pasting that URL into the "Open Shared Item" in the upper right setup menu.
 
